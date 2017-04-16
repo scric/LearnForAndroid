@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ActivityTestt</string>
+    <string name="button_1">Button 1</string>
+    <string name="remove">Remove</string>
+    <string name="add">Add</string>
+    <string name="dont_touch_me">Dont\'touch me!!!</string>
+    <string name="exit">Exit!!!</string>
+    <string name="touchme">TOUCHME</string>
+    <string name="button_2">Button 2</string>
+    <string name="baidu">百度一下</string>
+    <string name="button3">Button 3</string>
+    <string name="phone">打电话</string>
+    <string name="donothing">不干嘛</string>
+    <string name="personBBS">个人主页</string>
+    <string name="dosomething">dosomething!!!</string>
+</resources>

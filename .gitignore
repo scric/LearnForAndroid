@@ -1,0 +1,10 @@
+ActivityLifeCycleTest/.idea/
+ActivityLifeCycleTest/gradle/
+HelloWorld/.gitignore
+HelloWorld/.idea/
+HelloWorld/build.gradle
+HelloWorld/gradle.properties
+HelloWorld/gradlew
+HelloWorld/gradlew.bat
+HelloWorld/settings.gradle
+HelloWorld/gradle/
