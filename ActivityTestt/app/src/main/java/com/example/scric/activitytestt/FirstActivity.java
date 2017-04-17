@@ -11,8 +11,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class FirstActivity extends AppCompatActivity {
+public class FirstActivity extends BaseActivity {
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("FirstActivity", "onRestart");
+    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch (requestCode) {
@@ -59,6 +64,8 @@ public class FirstActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.first_layout);
+//        Log.d("FirstActivity", this.toString());
+        Log.d("FirstActivity", "Task id is" + getTaskId());
 //        int n = 0;
 //        while (true)
 //        {
@@ -86,8 +93,11 @@ public class FirstActivity extends AppCompatActivity {
         Button button2 = (Button) findViewById(R.id.buttonPane2);
         button2.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                Toast.makeText(FirstActivity.this, "真别碰, 这是退出啦", Toast.LENGTH_SHORT).show();
-                finish();
+//                Toast.makeText(FirstActivity.this, "真别碰, 这是退出啦", Toast.LENGTH_SHORT).show();
+//                finish();
+//                Intent intent = new Intent(FirstActivity.this,FirstActivity.class);
+                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+                startActivity(intent);
             }
         });
         Button button3 = (Button) findViewById(R.id.buttonPane3);
@@ -106,7 +116,8 @@ public class FirstActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 //                String data = "Hello SecondActivity";
-                Intent intent = new Intent(FirstActivity.this, SecondActivity.class); // 这是一个显式 Intent
+//                Intent intent = new Intent(FirstActivity.this, SecondActivity.class); // 这是一个显式 Intent
+                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
 //                intent.putExtra("extra_data", data); // putExtra 接受两个键, 一个参数是键, 用于后面从 Intent 中取值, 第二个参数是真正要传递的数据
 //                startActivity(intent);
                 startActivityForResult(intent, 1);

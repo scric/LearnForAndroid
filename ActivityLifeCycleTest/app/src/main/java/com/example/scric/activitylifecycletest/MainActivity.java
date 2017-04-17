@@ -6,18 +6,31 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = "MainActivity";
 
     @Override
-
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        String tempData = "Something you just type";
+        outState.putString("data_key", tempData); // 保存字符串
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.d(TAG, "onCreate.,,");
+
+
+        if (savedInstanceState != null) {
+            String tempData = savedInstanceState.getString("data_key");
+            Log.d(TAG, tempData);
+        } else Log.d(TAG, "sbbbbb");
 
         Button startNormalActivity = (Button) findViewById(R.id.start_normal_activity);
         startNormalActivity.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +47,23 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent1 = new Intent(MainActivity.this, Dialog_Activity.class);
                 startActivity(intent1);
+            }
+        });
+        final EditText editText = (EditText) findViewById(R.id.editText);
+        editText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                switch (v.getId())
+                {
+                    case R.id.editText:
+                        String inputText = editText.getText().toString();
+                        Toast.makeText(MainActivity.this,inputText,Toast.LENGTH_SHORT).show();
+//                        savedInstanceState.putString("data_key",inputText);
+                        break;
+                    default:
+                        break;
+                }
             }
         });
     }

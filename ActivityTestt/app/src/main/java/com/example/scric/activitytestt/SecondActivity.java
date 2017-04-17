@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class SecondActivity extends AppCompatActivity {
+public class SecondActivity extends BaseActivity {
     @Override
     public void onBackPressed() {
         Intent intent = new Intent();
@@ -19,8 +19,14 @@ public class SecondActivity extends AppCompatActivity {
         finish();
     }
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("SecondActivity", "onDestory");
+    }
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("SecontActivity", "Task id is" + getTaskId());
         setContentView(R.layout.second_layout);
 
 //        final Intent intent = getIntent();
@@ -32,6 +38,8 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(SecondActivity.this, "说了不干嘛你还碰,是不是喜欢我啊?", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
+                startActivity(intent);
             }
         });
 
