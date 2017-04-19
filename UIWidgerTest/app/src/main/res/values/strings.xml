@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">UIWidgerTest</string>
+    <string name="this_is_textview">This is TextView</string>
+    <string name="touchMe">点我</string>
+    <string name="button">button</string>
+</resources>
