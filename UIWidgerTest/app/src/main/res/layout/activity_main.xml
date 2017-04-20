@@ -44,8 +44,19 @@
         <!--android:hint="请输入内容吧"-->
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="wrap_content" />-->
-    <ImageButton
-        android:src="@drawable/selector"
+    <!--<ImageButton-->
+        <!--android:id="@+id/buttonPanel4"-->
+        <!--android:src="@drawable/selector"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+    <Button
+        android:id="@+id/buttonPanel5"
+        android:text="@string/alertdialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/buttonPanel6"
+        android:text="@string/progressdialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

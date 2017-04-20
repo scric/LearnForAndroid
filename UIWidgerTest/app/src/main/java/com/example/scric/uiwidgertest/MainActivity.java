@@ -1,6 +1,9 @@
 package com.example.scric.uiwidgertest;
 
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,8 +21,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         Toast.makeText(MainActivity.this, "返回键被激活啦", Toast.LENGTH_SHORT).show();
-
-//        finish();
+        finish();
     }
 
     @Override
@@ -75,6 +77,42 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else
                         imageView.setVisibility(View.GONE);
+            }
+        });
+
+        Button button3 = (Button) findViewById(R.id.buttonPanel5);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
+                dialog.setTitle("This is Dialog");
+                dialog.setMessage("我可以屏蔽掉其他控件的交互能力哦");
+                dialog.setCancelable(false);
+                dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                });
+                dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                });
+                dialog.show();
+            }
+        });
+
+        Button button4 = (Button) findViewById(R.id.buttonPanel6);
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
+                progressDialog.setTitle("This is ProgressDialog");
+                progressDialog.setMessage("Loading....");
+                progressDialog.setCancelable(true); // 如果传入 false, 则该不能通过 Back 键取消掉.
+                Toast.makeText(MainActivity.this, "可以用 Back 键取消掉哦", Toast.LENGTH_SHORT).show();
+                progressDialog.show();
+
             }
         });
     }
