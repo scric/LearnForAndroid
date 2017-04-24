@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Fruit fruit = fruitList.get(position);
-                Toast.makeText(MainActivity.this, fruit.getName(), Toast.LENGTH_SHORT).show()6
+                Toast.makeText(MainActivity.this, fruit.getName(), Toast.LENGTH_SHORT).show();
             }
         });
     }
