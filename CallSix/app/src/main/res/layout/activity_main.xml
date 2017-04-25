@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.github.onlynight.taglayout.library.TagLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/buttonPanel"
+        android:text="李烨恒"
+        android:layout_gravity="start|top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <Button
+        android:id="@+id/buttonPanel2"
+        android:text="陆航"
+        android:layout_gravity="end|top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/buttonPanel3"
+        android:text="鲍孟"
+        android:layout_gravity="start|center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/buttonPanel4"
+        android:text="张鑫"
+        android:layout_gravity="end|center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/buttonPanel5"
+        android:text="胡宇航"
+        android:layout_gravity="start|center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/buttonPanel6"
+        android:text="潘睿"
+        android:layout_gravity="end|center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/buttonPanel7"
+        android:text="陈顺"
+        android:layout_gravity="start|bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/buttonPanel8"
+        android:text="王若虎"
+        android:layout_gravity="end|bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</com.github.onlynight.taglayout.library.TagLayout>
