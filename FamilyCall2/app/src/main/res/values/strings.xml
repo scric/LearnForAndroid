@@ -3,4 +3,6 @@
     <string name="sos">SOS</string>
     <string name="help">119</string>
     <string name="exit">exit</string>
+    <string name="firstaid">FirstAid</string>
+    <string name="exit1">Exit</string>
 </resources>

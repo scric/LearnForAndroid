@@ -3,7 +3,7 @@
     <item android:id="@+id/sos"
         android:title="@string/sos"/>
     <item android:id="@+id/help"
-        android:title="@string/help"/>
+        android:title="@string/firstaid"/>
     <item android:id="@+id/exit"
-        android:title="@string/exit"/>
+        android:title="@string/exit1"/>
 </menu>
