@@ -15,20 +15,23 @@ import java.util.List;
 
 public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
     private List<Msg> mMsgList;
-    LinearLayout leftLayout;
-    LinearLayout rightLayout;
-    TextView leftMsg;
-    TextView rightMsg;
 
-    ViewHolder(View view) {
-        super(view);
-        leftLayout = (LinearLayout) view.findViewById(R.id.left_layout);
-        rightLayout = (LinearLayout) view.findViewById(R.id.right_layout);
-        leftMsg = (TextView) view.findViewById(R.id.left_msg);
-        rightMsg = (TextView) view.findViewById(R.id.right_msg);
-    }
+    static class ViewHolder extends RecyclerView.ViewHolder{
+        LinearLayout leftLayout ;
+        LinearLayout rightLayout;
+        TextView leftMsg;
+        TextView rightMsg;
+        ViewHolder(View view) {
+            super(view);
+            leftLayout = (LinearLayout) view.findViewById(R.id.left_layout);
+            rightLayout = (LinearLayout) view.findViewById(R.id.right_layout);
+            leftMsg = (TextView) view.findViewById(R.id.left_msg);
+            rightMsg = (TextView) view.findViewById(R.id.right_msg);
+        }
+    };
 
-    MsgAdapter(List<Msg> msgList) {
+    MsgAdapter(List<Msg> msgList)
+    {
         mMsgList = msgList;
     }
 
@@ -37,6 +40,23 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.msg_item, parent, false);
         return new ViewHolder(view);
     }
-    @
+
+    @Override
+    public void onBindViewHolder(ViewHolder holder, int position) {
+        Msg msg = mMsgList.get(position);
+        if (msg.getGetTypeReceived() == Msg.TYPE_RECEIVED) {
+            holder.leftLayout.setVisibility(View.VISIBLE);
+            holder.rightLayout.setVisibility(View.GONE);
+            holder.leftMsg.setText(msg.getContent());
+        } else if (msg.getGetTypeReceived() == Msg.TYPE_SENT) {
+            holder.leftLayout.setVisibility(View.VISIBLE);
+            holder.rightLayout.setVisibility(View.GONE);
+            holder.rightMsg.setText(msg.getContent());
+        }
+    }
+    @Override
+    public int getItemCount() {
+        return mMsgList.size();
+    }
 
 }
