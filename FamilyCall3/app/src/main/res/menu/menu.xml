@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/exit"
+        android:title="Exit"/>
+    <item android:id="@+id/readingnotes"
+        android:title="读书笔记"/>
+    <item android:id="@+id/github_me"
+        android:title="你喜欢的我"/>
+    <item android:id="@+id/github_she"
+        android:title="写给你"/>
+
+
+
+</menu>

@@ -13,10 +13,11 @@ import java.util.List;
  * Created by scric on 2017/4/27.
  */
 
-public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
+class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
     private List<Msg> mMsgList;
 
     static class ViewHolder extends RecyclerView.ViewHolder{
+
         LinearLayout leftLayout ;
         LinearLayout rightLayout;
         TextView leftMsg;
@@ -28,7 +29,7 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
             leftMsg = (TextView) view.findViewById(R.id.left_msg);
             rightMsg = (TextView) view.findViewById(R.id.right_msg);
         }
-    };
+    }
 
     MsgAdapter(List<Msg> msgList)
     {
@@ -49,8 +50,8 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
             holder.rightLayout.setVisibility(View.GONE);
             holder.leftMsg.setText(msg.getContent());
         } else if (msg.getGetTypeReceived() == Msg.TYPE_SENT) {
-            holder.leftLayout.setVisibility(View.VISIBLE);
-            holder.rightLayout.setVisibility(View.GONE);
+            holder.rightLayout.setVisibility(View.VISIBLE);
+            holder.leftLayout.setVisibility(View.GONE);
             holder.rightMsg.setText(msg.getContent());
         }
     }
