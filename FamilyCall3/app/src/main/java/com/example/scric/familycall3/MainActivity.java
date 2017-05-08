@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showPopupMenu(floatingActionButton2);
-                Toast.makeText(MainActivity.this, "你触及我心脏", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Touch Me", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -115,6 +115,12 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent2 = new Intent(Intent.ACTION_VIEW);
                         intent2.setData(Uri.parse("https://scric.github.io/index"));
                         startActivity(intent2);
+                        break;
+                    case R.id.daily:
+                        Toast.makeText(MainActivity.this,"每天都会写哦( ˘ ³˘)ℒ❁Ѵ℮",Toast.LENGTH_SHORT).show();
+                        Intent intent3 = new Intent(Intent.ACTION_VIEW);
+                        intent3.setData(Uri.parse("https://www.zybuluo.com/scric/note/746229"));
+                        startActivity(intent3);
                         break;
                     case R.id.exit:
                         Toast.makeText(MainActivity.this, "啊不要这样子啦( 。ớ ₃ờ)ھ", Toast.LENGTH_SHORT).show();
