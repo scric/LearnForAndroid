@@ -4,4 +4,5 @@
     <string name="firstaid">FirstAid</string>
     <string name="exit1">exit</string>
     <string name="Sos">SOS</string>
+    <string name="startactivity">StartActivity</string>
 </resources>

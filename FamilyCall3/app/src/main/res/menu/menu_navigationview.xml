@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_likeme"
+            android:icon="@drawable/ic_fab_star"
+            android:title="你喜欢的我"/>
+        <item android:id="@+id/nav_reading"
+            android:icon="@drawable/ic_fab_star"
+            android:title="读书笔记"/>
+        <item android:id="@+id/nav_updating"
+            android:icon="@drawable/ic_fab_star"
+            android:title="更新说明"/>
+        <item android:id="@+id/nav_writeToyou"
+            android:title="写给你"
+            android:icon="@drawable/ic_fab_star"/>
+        <item android:id="@+id/nav_dating"
+            android:title="日记"
+            android:icon="@drawable/ic_fab_star"/>
+        <item android:id="@+id/exit"
+            android:title="Exit"
+            android:icon="@drawable/ic_fab_star"/>
+    </group>
+</menu>

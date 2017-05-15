@@ -53,18 +53,19 @@
         </android.support.percent.PercentFrameLayout>
 
         <!--实现FloathingActionButton-->
-        <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingbutton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_margin="16dp"
-            fab:fabSize="normal"
-            fab:fab_icon="@drawable/ic_fab_star"
-            fab:fab_colorNormal="@color/pink"
-            fab:fab_colorPressed="@color/pink_pressed"
-            />
+        <!--<com.getbase.floatingactionbutton.FloatingActionButton-->
+            <!--android:id="@+id/floatingbutton"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_margin="16dp"-->
+            <!--fab:fabSize="normal"-->
+            <!--fab:fab_icon="@drawable/ic_fab_star"-->
+            <!--fab:fab_colorNormal="@color/pink"-->
+            <!--fab:fab_colorPressed="@color/pink_pressed"-->
+            <!--/>-->
+
 
         <!--实现FloatingActionMenu-->
 
@@ -111,8 +112,13 @@
                 <!--android:adjustViewBounds="false" />-->
         <!--</com.getbase.floatingactionbutton.FloatingActionsMenu>-->
     </RelativeLayout>
-
-
-
+<android.support.design.widget.NavigationView
+    android:id="@+id/nav_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity = "start"
+    fab:menu="@menu/menu_navigationview"
+    fab:headerLayout="@layout/nav_header"
+    />
 
 </android.support.v4.widget.DrawerLayout>
